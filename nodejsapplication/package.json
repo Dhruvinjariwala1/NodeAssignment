@@ -1,19 +1,24 @@
 {
     "name": "my-node-app",
     "version": "1.0.0",
+    "description": "A brief description of your application",
+    "main": "index.js",
     "scripts": {
         "start": "node server.js",
         "test": "jest",
-        "build": "babel src --out-dir dist",
-        "lint": "eslint src --ext .js,.jsx",
-        "deploy": "node deploy.js"
+        "build": "webpack --config webpack.config.js",
+        "lint": "eslint .",
+        "dev": "nodemon server.js"
     },
     "dependencies": {
         "express": "^4.17.1"
     },
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "eslint": "^7.25.0",
-        "jest": "^27.0.6"
-    }
+        "jest": "^27.0.6",
+        "webpack": "^5.38.1",
+        "eslint": "^7.32.0",
+        "nodemon": "^2.0.12"
+    },
+    "author": "Your Name",
+    "license": "ISC"
 }
